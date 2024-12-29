@@ -52,7 +52,7 @@ form.addEventListener('submit', e => {
 
 //API get request
 async function fetchWeather() {
-    const apiKey = 'c7e8106723da04b847d6e25e6b44b0da';  // Replace with your actual API key
+    const apiKey = 'c7e8106723da04b847d6e25e6b44b0da'; 
     const city = 'Boston';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
@@ -70,6 +70,9 @@ async function fetchWeather() {
             textColor = 'yellow';
         } else if (description.includes('Rain')){
             textColor = 'blue'; // Default color
+        }
+        else{
+            textColor = 'white';
         }
 
         let tempColor
